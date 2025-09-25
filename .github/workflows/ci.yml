@@ -1,0 +1,74 @@
+# Nome do Workflow para identificação no GitHub Actions
+name: CI - Verificação de Qualidade do Ordo
+
+# Gatilho (Trigger): Este workflow será executado em duas condições
+on:
+  # 1. Em todo push para a branch de desenvolvimento
+  push:
+    branches: [ develop ]
+  # 2. Em toda abertura ou atualização de Pull Request para a branch de desenvolvimento
+  pull_request:
+    branches: [ develop ]
+
+# Define os trabalhos (jobs) que serão executados
+jobs:
+  # Primeiro trabalho: verificar o código do backend
+  check-backend:
+    # O tipo de máquina virtual que o job irá rodar
+    runs-on: ubuntu-latest
+    # Define o diretório de trabalho padrão para os comandos deste job
+    defaults:
+      run:
+        working-directory: ./backend
+
+    steps:
+      # 1. Faz o checkout do código do repositório para a máquina virtual
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      # 2. Configura o ambiente Node.js com a versão especificada
+      - name: Configurar Node.js v22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm' # Habilita o cache de dependências para agilizar futuras execuções
+          cache-dependency-path: backend/package-lock.json
+
+      # 3. Instala as dependências do projeto
+      - name: Instalar dependências
+        run: npm install
+
+      # 4. Roda o linter para verificar padrões de código
+      - name: Verificar código com Linter
+        run: npm run lint
+
+      # 5. Roda os testes automatizados
+      - name: Rodar testes
+        run: npm test
+
+  # Segundo trabalho: verificar o código do frontend (roda em paralelo com o backend)
+  check-frontend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./frontend
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js v22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Instalar dependências
+        run: npm install
+
+      - name: Verificar código com Linter
+        run: npm run lint
+
+      - name: Rodar testes
+        run: npm test
