@@ -1,0 +1,28 @@
+# Arquivo de configuração para o Dependabot
+# Usado para manter as dependências do projeto atualizadas (versões e segurança).
+
+version: 2
+updates:
+  # Manter dependências do backend (npm)
+  - package-ecosystem: "npm"
+    directory: "/backend" # Localização do meu package.json
+    schedule:
+      interval: "weekly" # Frequência da verificação (diária, semanal, mensal)
+    # Define um limite de PRs abertos para não sobrecarregar
+    open-pull-requests-limit: 10
+    # Adiciona labels aos PRs para fácil identificação
+    labels:
+      - "dependencies"
+      - "backend"
+      - "automerge"
+
+  # Manter dependências do frontend (npm)
+  - package-ecosystem: "npm"
+    directory: "/frontend" # Localização do meu package.json
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "frontend"
+      - "automerge"
