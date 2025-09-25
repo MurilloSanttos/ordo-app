@@ -1,5 +1,7 @@
 # Ordo - Organize seu fluxo, conquiste seu dia.
 
+![CI - Verificação de Qualidade do Ordo](https://github.com/MurilloSanttos/ordo-app/actions/workflows/ci.yml/badge.svg)
+
 Ordo é um aplicativo de To-Do List moderno e minimalista, projetado para ajudar você a organizar suas tarefas, focar no que é importante e alcançar seus objetivos com fluidez.
 
 ## ✨ Funcionalidades Planejadas
