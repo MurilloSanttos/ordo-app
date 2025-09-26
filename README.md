@@ -2,7 +2,7 @@
 
 <div align="center">
   
-![Status do CI](https://github.com/MurilloSanttos/ordo-app/actions/workflows/ci.yml/badge.svg)
+[![Status do CI](https://github.com/MurilloSanttos/ordo-app/actions/workflows/ci.yml/badge.svg)](https://github.com/MurilloSanttos/ordo-app/actions)
 [![Licença](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 [![Versão](https://img.shields.io/badge/version-0.1.0--alpha-orange)](https://github.com/SEU-USUARIO/ordo-app/releases)
 [![Segurança](https://img.shields.io/badge/security-Dependabot-brightgreen)](https://github.com/SEU-USUARIO/ordo-app/security)
