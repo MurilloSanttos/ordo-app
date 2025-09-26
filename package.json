@@ -1,0 +1,42 @@
+{
+  "name": "ordo-app",
+  "version": "1.0.0",
+  "description": "<div align=\"center\">",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "install:all": "npm install && npm install --prefix backend && npm install --prefix frontend",
+    "dev": "concurrently \"npm:dev:backend\" \"npm:dev:frontend\"",
+    "dev:backend": "npm run dev --prefix backend",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "lint": "npm run lint --prefix backend && npm run lint --prefix frontend",
+    "test": "npm run test --prefix backend && npm run test --prefix frontend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MurilloSanttos/ordo-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/MurilloSanttos/ordo-app/issues"
+  },
+  "homepage": "https://github.com/MurilloSanttos/ordo-app#readme",
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.1"
+  },
+  "lint-staged": {
+    "backend/**/*.{ts,js}": [
+      "npm run lint --prefix backend --"
+    ],
+    "frontend/src/**/*.{ts,tsx,js,jsx}": [
+      "npm run lint --prefix frontend --"
+    ]
+  }
+}

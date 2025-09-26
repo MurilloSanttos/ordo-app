@@ -1,7 +1,7 @@
 # Ordo - Organize seu fluxo, conquiste seu dia.
 
 <div align="center">
-  
+
 ![Status do CI](https://github.com/MurilloSanttos/ordo-app/actions/workflows/ci.yml/badge.svg)
 [![Licença](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 [![Versão](https://img.shields.io/badge/version-0.1.0--alpha-orange)](https://github.com/SEU-USUARIO/ordo-app/releases)
@@ -29,6 +29,20 @@ Este projeto foi construído com uma stack moderna baseada em TypeScript:
 - **Backend:** Node.js, Express.js, TypeScript
 - **Banco de Dados:** MySQL
 - **Autenticação:** JWT (JSON Web Tokens) e Bcrypt
+
+### 🚀 Ambiente de Desenvolvimento Padronizado (VSCode)
+
+Para garantir uma experiência de desenvolvimento consistente, nosso repositório inclui uma configuração pré-definida para o Visual Studio Code.
+
+**Para começar, siga estes passos:**
+
+1.  **Clone o repositório** e abra a pasta raiz no VSCode.
+2.  **Instale as Extensões Recomendadas:** Assim que o projeto abrir, o VSCode deve exibir uma notificação no canto inferior direito perguntando: *"This workspace has recommended extensions. Do you want to install them?"*. Clique em **"Install"**.
+3.  **Pronto!** A partir de agora:
+    -   Seu código será **formatado automaticamente** toda vez que você salvar um arquivo.
+    -   Erros de padrão de código (ESLint) serão **destacados em tempo real** e corrigidos ao salvar.
+    -   Você pode iniciar a depuração pressionando `F5` ou acessando a aba "Run and Debug".
+    -   Você pode iniciar os servidores rapidamente usando a paleta de comandos (`Ctrl+Shift+P`), digitando "Run Task" e escolhendo `Start Backend` ou `Start Frontend`.
 
 ## 🚀 Guia de Instalação e Execução
 

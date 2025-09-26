@@ -1,0 +1,43 @@
+{
+  "env": {
+    "es2021": true,
+    "node": true,
+    "jest": true
+  },
+  "extends": [
+    "airbnb-base",
+    "plugin:@typescript-eslint/recommended",
+    "prettier" // ESSENCIAL: Usa as configs do Prettier para desativar regras de estilo conflitantes do ESLint.
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": "error", // Aponta erros de formatação do Prettier como erros do ESLint.
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "ts": "never"
+      }
+    ],
+    // Regra opcional: em muitos projetos, a exportação padrão não é forçada.
+    "import/prefer-default-export": "off",
+    // Permite que construtores de classe fiquem vazios.
+    "no-useless-constructor": "off",
+    // Permite o uso de "_" para parâmetros não utilizados, comum em controllers do Express.
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }]
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
+  }
+}

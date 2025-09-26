@@ -1,0 +1,23 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+        "label": "Start Backend (dev)",
+        "type": "npm",
+        "script": "dev",
+        "path": "backend/",
+        "group": "build",
+        "problemMatcher": [],
+        "detail": "Inicia o servidor de desenvolvimento do backend."
+        },
+        {
+        "label": "Start Frontend (dev)",
+        "type": "npm",
+        "script": "dev",
+        "path": "frontend/",
+        "group": "build",
+        "problemMatcher": [],
+        "detail": "Inicia o servidor de desenvolvimento do frontend."
+        }
+    ]
+}

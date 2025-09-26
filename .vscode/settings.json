@@ -1,0 +1,33 @@
+{
+    // --- Formatação e Qualidade de Código ---
+    "editor.defaultFormatter": "esbenp.prettier-vscode",    // Define o Prettier como formatador padrão.
+    "editor.formatOnSave": true,                            // Formata o código automaticamente ao salvar. Essencial!
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"                  // Corrige automaticamente os erros de ESLint que são corrigíveis ao salvar.
+    },
+
+    // --- Configurações Específicas de Linguagem ---
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+
+    // --- Exclusão de Arquivos ---
+    // Oculta pastas desnecessárias da árvore de arquivos para um ambiente mais limpo.
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/node_modules": true // Oculta a pasta node_modules
+    },
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/*.code-search": true
+    }
+}

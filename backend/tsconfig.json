@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "es2021",                           // Versão do ECMAScript de destino
+    "module": "commonjs",                         // Sistema de módulos (padrão do Node.js)
+    "rootDir": "./src",                           // Diretório raiz dos arquivos de código-fonte
+    "outDir": "./dist",                           // Diretório de saída para o código compilado
+    "esModuleInterop": true,                      // Habilita a interoperabilidade entre CommonJS e ES Modules
+    "forceConsistentCasingInFileNames": true,     // Garante que os nomes de arquivos sejam consistentes
+    "strict": true,                               // Habilita todas as checagens de tipo estritas
+    "skipLibCheck": true                          // Pula a verificação de tipos em arquivos de declaração (.d.ts)
+  },
+  "include": ["src/**/*"] // Inclui todos os arquivos dentro da pasta src na compilação
+}

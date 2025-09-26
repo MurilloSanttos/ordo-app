@@ -1,0 +1,13 @@
+{
+    "recommendations": [
+        // --- Essenciais (Prioridade Alta) ---
+        "dbaeumer.vscode-eslint",       // Integra o ESLint diretamente no editor para apontar erros de padrão.
+        "esbenp.prettier-vscode",       // A extensão oficial do Prettier para formatação automática de código.
+        "eamodio.gitlens",              // Superpoderes para o Git: histórico, autoria da linha (blame), etc.
+
+        // --- Recomendadas (Prioridade Média) ---
+        "mikestead.dotenv",             // Adiciona destaque de sintaxe para arquivos .env, evitando erros.
+        "humao.rest-client",            // Permite fazer requisições HTTP diretamente do VSCode, ótimo para testar a API.
+        "ms-vsls.vsls"                  // Live Share: para programação em par e colaboração em tempo real.
+    ]
+}
